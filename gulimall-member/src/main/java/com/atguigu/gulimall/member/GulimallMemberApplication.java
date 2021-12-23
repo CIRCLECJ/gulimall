@@ -8,9 +8,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 /**
  * 1、想要远程调用别的服务
  * 1）、引入open-feign
- * 2）、编写一个接口，告诉SpringCloud这个接口需要调用远程服务
+ * 2）、编写一个接口，告诉SpringCloud这个接口需要调用远程服务（feign包里的接口）
  *   1、声明接口的每一个方法都是调用哪个远程服务的那个请求
- * 3）、开启远程调用功能
+ * 3）、开启远程调用功能（就会在启动时扫描这个包下所有的接口）
  */
 @EnableFeignClients(basePackages = "com.atguigu.gulimall.member.feign")
 @EnableDiscoveryClient
